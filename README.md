@@ -9,11 +9,11 @@ Currently, two official plugins are available:
 
 # You can download code in 2 ways :
 ## Git Commands
-- use git clone <repository_url>
-- run npm install inside the directory before running the code
-- run npm run dev to run the code
+- use **git clone <repository_url>**
+- run **npm install** inside the directory before running the code
+- run **npm run dev** to run the code
 
 ## If you are not comfortable with git, directly download the branch as Zip.
 - Choose branch related to the Directory e.g. RMS
-- run npm install inside the directory before running the code
-- run npm run dev to run the code
+- run **npm install** inside the directory before running the code
+- run **npm run dev** to run the code

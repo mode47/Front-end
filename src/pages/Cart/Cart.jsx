@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
-  const {cartItems, food_list, removeFromCart,getTotalCartAmount} = useContext(StoreContext);
+  const {cartItems, food, removeFromCart,getTotalCartAmount} = useContext(StoreContext);
   const navigate = useNavigate();
 
   return (
@@ -16,16 +16,16 @@ const Cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
-          if (cartItems[item.food_id]>0) {
+        {food.map((item, index) => {
+          if (cartItems[item.id]>0) {
             return (<div key={index}>
               <div className="cart-items-title cart-items-item">
-                <img src={item.food_image} alt="" />
-                <p>{item.food_name}</p>
-                <p>${item.food_price}</p>
-                <div>{cartItems[item.food_id]}</div>
-                <p>${item.food_price*cartItems[item.food_id]}</p>
-                <p className='cart-items-remove-icon' onClick={()=>removeFromCart(item.food_id)}>x</p>
+                <img src={item.iamge} alt="" />
+                <p>{item.name}</p>
+                <p>${item.price}</p>
+                <div>{cartItems[item.id]}</div>
+                <p>${item.price*cartItems[item.id]}</p>
+                <p className='cart-items-remove-icon' onClick={()=>removeFromCart(item.id)}>x</p>
               </div>
               <hr />
             </div>)

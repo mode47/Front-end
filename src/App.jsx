@@ -12,11 +12,19 @@ const App = () => {
 
   const [showLogin,setShowLogin] = useState(false);
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
   return (
     <>
-    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
+    {showLogin?<LoginPopup 
+     setIsLoggedIn={setIsLoggedIn}
+    setShowLogin={setShowLogin}/>:<></>}
       <div className='app'>
-        <Navbar setShowLogin={setShowLogin}/>
+        <Navbar 
+         isLoggedIn={isLoggedIn}
+         setIsLoggedIn={setIsLoggedIn}
+        setShowLogin={setShowLogin}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/cart' element={<Cart/>}/>

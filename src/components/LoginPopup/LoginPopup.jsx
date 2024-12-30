@@ -28,7 +28,7 @@ useEffect(()=>{
             });
             if(response.status===200 && currState === 'Login'){
                 console.log("Login successful");
-                alert("Login successful");
+                console.log("response:",response.data);
                 setIsLoggedIn(true); // Update the global state
                 setIsLoggedIn(true);
                 setShowLogin(false);
